@@ -70,14 +70,17 @@ const TemperatureMap = () => {
   return (
     <div style={{ height: "100vh", width: "100%" }}>
       <MapContainer
-        center={[0, 0]}
-        zoom={2}
+        center={[30, 0]}
+        zoom={1.5}
+        minZoom={1}
+        maxZoom={6}
         style={{ height: "100%", width: "100%" }}
         worldCopyJump={true}
       >
         <TileLayer
           url="https://{s}.basemaps.cartocdn.com/dark_nolabels/{z}/{x}/{y}{r}.png"
           attribution="&copy; OpenStreetMap & CartoDB"
+          noWrap={true}
         />
         <TemperatureGrid data={data} />
       </MapContainer>
