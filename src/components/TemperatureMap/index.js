@@ -40,9 +40,11 @@ const TemperatureGrid = ({ data }) => {
         fillOpacity: 0.6,
       });
 
-      rect.bindPopup(
-        `<b>Lat:</b> ${lat.toFixed(2)}<br/><b>Lon:</b> ${lon.toFixed(2)}<br/><b>Temp:</b> ${pt.temperature}°C`
-      );
+      rect.bindPopup(`
+        <b>Temp:</b> ${pt.temperature}°C
+        <br/><b>Lat:</b> ${lat.toFixed(2)}
+        <br/><b>Lon:</b> ${lon.toFixed(2)}
+      `);
 
       rect.addTo(layerGroup);
     });
